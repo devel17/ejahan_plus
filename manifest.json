@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "background_page": "background.html",
+    "content_scripts": [{
+        "js": [ "/js/jquery-1.5.1.min.js" , "/js/jquery.dataTables.js" , "/js/jquery.dataTables.min.js"  , "background.js" ],
+        "css": [ "/css/military.css"],
+        "matches": [
+        "http://*.ejahan.org/*"
+        ]
+    }],
+    "description": "eJahan Plus for Chrome",
+    "name": "eJahan Plus",
+    "page_actions": [{
+        "icons": [
+        "img/favicon.ico"
+        ],
+        "id": "eJahanPlus",
+        "name": "eJahanPlus"
+    }],
+    "permissions": [
+    "tabs",
+    "cookies",
+    "http://*.ejahan.org/*",
+    "http://*.ejahan.home.pl/*",
+    "http://*.ejahan.lt/*"
+    ],
+    "web_accessible_resources": [
+    "/js/core.js","/js/economy.js","/js/millitary.js", "/js/jquery.dataTables.js","/js/jquery.dataTables.min.js","http://*.ejahan.org/*"
+    ],
+    "version": "1.0"
+}
